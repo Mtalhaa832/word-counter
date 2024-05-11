@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div id="cotainer"><h1>word counter</h1><textarea id="textarea" cols="60" rows="10"></textarea><h1>words<span id="word"> 0</span> characters <span id="chr">0</span></h1>
+    </div>
+</body>
+<script>
+    let textarea =document.getElementById("textarea")
+    textarea.addEventListener("input",()=>{
+        let text = textarea.value;
+        let ch =text.length;
+     let chr =document.getElementById("chr").innerHTML = ch;
+     let words =text.split(" ")
+     let filter =words.filter((val) => val != "")
+document.getElementById("word").innerHTML = filter.length
+
+    })
+
+</script>
+</html>
